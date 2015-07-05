@@ -7,12 +7,9 @@ ENV LANG C.UTF-8
 
 ENV PHALCON_VERSION 1.3.5
 
-# Install tools
+# Install Phalcon dependencies
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends ca-certificates \
-    g++ libpcre3-dev libc6-dev make numactl pdftk \
-    poppler-utils php5-dev re2c software-properties-common \
-  && rm -rf /var/curllib/apt/lists/*
+  && apt-get install -y --no-install-recommends php5-dev re2c make libpcre3-dev
 
 # Install Phalcon
 RUN git clone --branch ${PHALCON_VERSION} git://github.com/phalcon/cphalcon.git \

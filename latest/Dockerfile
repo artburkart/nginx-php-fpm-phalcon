@@ -5,12 +5,9 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV INITRD No
 ENV LANG C.UTF-8
 
-# Install tools
+# Install Phalcon dependencies
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends ca-certificates \
-    g++ libpcre3-dev libc6-dev make numactl pdftk \
-    poppler-utils php5-dev re2c software-properties-common \
-  && rm -rf /var/curllib/apt/lists/*
+  && apt-get install -y --no-install-recommends php5-dev re2c make libpcre3-dev
 
 # Install Phalcon
 RUN git clone git://github.com/phalcon/cphalcon.git \
