@@ -40,5 +40,5 @@ If you want to link to your web site directory on the docker host to the contain
 sudo docker run --name phalcon -p 8080:80 -v /your_code_directory:/usr/share/nginx/html -d artburkart/nginx-php-fpm-phalcon
 ```
 
-## There are lots of other nice features,
-but I didn't do any of them. Check out [https://github.com/ngineered/nginx-php-fpm](https://github.com/ngineered/nginx-php-fpm) to find out what they are!
+## The folks at ngineered
+built out a lot of cool features into the image I based this on. Check them out at [https://github.com/ngineered/nginx-php-fpm](https://github.com/ngineered/nginx-php-fpm).
