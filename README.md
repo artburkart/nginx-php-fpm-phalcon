@@ -9,7 +9,7 @@ This is a Dockerfile to build a container image for nginx, php-fpm, and phalcon.
 - **latest**
 
 ## PHP Version
-- **5.5.x**
+- **~5.5**
 
 ### Git repository
 The source files for this project can be found here: [https://github.com/artburkart/nginx-php-fpm-phalcon](https://github.com/artburkart/nginx-php-fpm-phalcon)

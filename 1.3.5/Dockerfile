@@ -9,7 +9,13 @@ ENV PHALCON_VERSION 1.3.5
 
 # Install Phalcon dependencies
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends php5-dev re2c make libpcre3-dev
+  && apt-get install -y --no-install-recommends php5-dev re2c make libpcre3-dev software-properties-common
+
+# Uprade to latest PHP 5.5
+RUN add-apt-repository ppa:ondrej/php5 -y \
+  && apt-get update -y \
+  && apt-get upgrade -y \
+  && apt-get install php5 -y -o Dpkg::Options::="--force-confold" -o Dpkg::Options::="--force-confold"
 
 # Install Phalcon
 RUN git clone --branch ${PHALCON_VERSION} git://github.com/phalcon/cphalcon.git \
