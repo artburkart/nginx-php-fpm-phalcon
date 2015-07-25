@@ -37,7 +37,7 @@ You can then browse to http://\<docker_host\>:8080 to view the default install f
 If you want to link to your web site directory on the docker host to the container run:
 
 ```
-sudo docker run --name phalcon -p 8080:80 -v /your_code_directory:/usr/share/nginx/html -d artburkart/nginx-php-fpm-phalcon
+docker run --name phalcon -p 8080:80 -v /your_code_directory:/usr/share/nginx/html -d artburkart/nginx-php-fpm-phalcon
 ```
 
 ## The folks at ngineered
